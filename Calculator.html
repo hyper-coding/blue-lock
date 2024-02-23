@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>calculator</title>
+    <link rel="stylesheet" type="text/css" href="claculator.css">
+
+    <script>
+        function fun(num){
+            if(num==1) {
+                val = document.getElementById("output").value
+                document.getElementById("output").value = val + num;
+            }
+            else if(num==2){
+                val = document.getElementById("output").value
+                document.getElementById("output").value = val + num;
+            }
+            else if(num==3){
+                val = document.getElementById("output").value
+                document.getElementById("output").value = val + num;
+            }
+            else if(num==4){
+                val = document.getElementById("output").value
+                document.getElementById("output").value = val + num;
+            }
+            else if(num==5){
+                val = document.getElementById("output").value
+                document.getElementById("output").value = val + num;
+            }
+            else if(num==6){
+                val = document.getElementById("output").value
+                document.getElementById("output").value = val + num;
+            }
+            else if(num==7){
+                val = document.getElementById("output").value
+                document.getElementById("output").value = val + num
+            }
+            else if(num==8){
+                val = document.getElementById("output").value
+                document.getElementById("output").value = val + num
+            }
+            else if(num==9){
+                val = document.getElementById("output").value
+                document.getElementById("output").value = val + num
+
+            }
+            else if(num=='.'){
+                val = document.getElementById("output").value
+                document.getElementById("output").value = val + num
+            }
+            else if(num=='+'){
+                val = document.getElementById("output").value
+                sessionStorage.setItem("val1",val)
+                document.getElementById("output").value=val+num
+            }
+            else if(num=='-'){
+                val = document.getElementById("output").value
+                sessionStorage.setItem("val1",val)
+                document.getElementById("output").value=val+num
+            }
+            else if(num=='*'){
+                val = document.getElementById("output").value
+                sessionStorage.setItem("val1",val)
+                document.getElementById("output").value=val+num
+            }
+            else if(num=='/'){
+                val = document.getElementById("output").value
+                sessionStorage.setItem("val1",val)
+                document.getElementById("output").value=val+num
+            }
+            else if(num=='AC'){
+                val = document.getElementById("output").value
+                sessionStorage.setItem("val1",val)
+                document.getElementById("output").value=null
+            }
+            else if(num=='='){
+                let expression= document.getElementById('output').value;
+                let result=eval(expression);
+                document.getElementById('output').value=result;
+
+
+
+
+            }
+            else if(num=="C"){
+                val = document.getElementById("output").value
+                len=(val.length)-1
+                val=val.slice(0,len)
+                document.getElementById("output").value=val
+
+
+            }
+
+
+
+
+
+        }
+    </script>
+</head>
+<body>
+<center>
+<div class="border">
+    <div>
+        <table>
+            <tr>
+                <td colspan="5"> <input type="text" class="fileSpace" id="output" ></td>
+            </tr>
+            <tr>
+                <td><input onclick="fun(7)" type="button" VALUE="7" class="box num" id="7"></td>
+                    <td> <input onclick="fun(8)" type="button" VALUE="8" class="box num" id="8"> </td>
+                    <td> <input onclick="fun(9)" type="button" VALUE="9" class="box num" id="9"> </td>
+                    <td><input  onclick="fun('AC')"  type="button" VALUE="AC" class="box h" id="ac"></td>
+                    <td> <input onclick="fun('C')" type="button" VALUE="C" class="box c h" id ="C"> </td>
+            </tr>
+                <tr>
+                    <td> <input onclick="fun(4) "type="button" VALUE="4" class="box num" id ="4"> </td>
+                    <td> <input onclick="fun(5) "type="button" VALUE="5" class="box num" id ="5"></td>
+                    <td> <input onclick="fun(6)" type="button" VALUE="6" class="box num" id ="6">  </td>
+                    <td><input onclick="fun('*')" type="button" VALUE="*" class="box per h" id ="X into" ></td>
+                    <td> <input onclick="fun('/')" type="button" VALUE="/" class="box per h" id ="/ by"> </td>
+                </tr>
+                <tr>
+                    <td> <input onclick="fun(1)" type="button" VALUE="1" class="box num" id ="1"> </td>
+                    <td> <input onclick="fun(2)" type="button" VALUE="2" class="box num" id ="2"> </td>
+                    <td><input onclick="fun(3)" type="button" VALUE="3" class="box num" id ="3"></td>
+                    <td> <input onclick="fun('-')" type="button" VALUE="-" class="box per h" id ="- minus"> </td>
+                    <td rowspan="2" > <input onclick="fun('=')" type="button" VALUE="=" class="E per" id="b" id ="="></td>
+                </tr>
+            <tr>
+                <td> <input onclick="fun(0)" type="button" VALUE="0" class="box num" id ="0"> </td>
+                <td> <input onclick="fun('.')" type="button" VALUE="." class="box num" id ="."> </td>
+
+                <td colspan="2"> <input onclick="fun('+') "type="button" VALUE="+" class="box p per h" id ="+ plus"> </td>
+            </tr>
+
+            </table>
+    </div>
+</div>
+</center>
+</body>
+</html>
